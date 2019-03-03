@@ -11,7 +11,6 @@ const Section = (props) => {
 						{props.children}
 					</div>
 				</div>
-				{props.block}
 			</section>
 		</React.Fragment>
 	)

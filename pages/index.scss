@@ -3,6 +3,16 @@
 @import '../styles/fonts';
 
 
+.container {
+	width: 100%;
+	max-width: 2100px;
+	flex: 1;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+}
+
+
 .topWrapper{
 	background-color: $main-section-background-color;
 }

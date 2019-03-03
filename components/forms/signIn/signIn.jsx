@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
 import Button from '../../button/button';
-import classes from './signUp.scss';
+import classes from './signIn.scss';
 import Input from '../input/input';
-import axios from '../../axios-orders';
 
-export class SignUp extends Component {
+export class SignIn extends Component {
 	state = {
 		orderForm: {
 			email: {
@@ -34,49 +33,12 @@ export class SignUp extends Component {
 				},
 				valid: false,
 				touched: false
-			},
-			name: {
-				elementType: 'input',
-				elementConfig: {
-					type: 'text',
-					placeholder: 'Your Name'
-				},
-				value: '',
-				validation: {
-					required: true,
-					minLength: 3
-				},
-				valid: false,
-				touched: false
 			}
 		},
 		formIsValid: false
-	}
-
-	sighUpHandler = (e) => {
-		e.preventDefault();
-		const formData = {};
-		var bodyFormData = new FormData();
-		for (let formElementIdentifier in this.state.orderForm) {
-			formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
-			bodyFormData.append(formElementIdentifier, this.state.orderForm.email.value);
-		}
-		console.log(bodyFormData);
-		 
-		axios.post('/auth/signup', bodyFormData)
-			.then(resp => {
-				console.log('All went goog!!!!');
-				console.log(resp)
-			})
-			.catch(error => {
-				console.log(bodyFormData);
-				console.log(formData);
-				console.log(error);
-			});
 
 	}
 
-	
 	checkValidity(value, rules) {
 		let isValid = true;
 
@@ -114,6 +76,8 @@ export class SignUp extends Component {
 		this.setState({orderForm: updatedOrderForm, formIsValid: formIsValid});
 	}
 
+	
+
 	render() {
 
 		const formElementsArray = [];
@@ -138,15 +102,14 @@ export class SignUp extends Component {
 						changed={(e) => this.inputChangedHandler(e, formElement.id)}/>
 				))}
 				<Button 
-					onClick={this.sighUpHandler}
 					btnType="success" 
 					disabled={!this.state.formIsValid}
-					title='SIGN UP'>
+					title='SIGN IN'>
 				</Button>
 			</form>
 		);
 		return (
-			<div className={classes.signUP}> 
+			<div className={classes.signIn}> 
 				<h4>Enter your information</h4>
 				{form}
 			</div>
@@ -154,4 +117,4 @@ export class SignUp extends Component {
 	}
 }
 
-export default SignUp;
+export default SignIn;
