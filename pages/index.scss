@@ -1,0 +1,23 @@
+@import '../styles/core.scss';
+@import '../styles/base';
+@import '../styles/fonts';
+
+
+.topWrapper{
+	background-color: $main-section-background-color;
+}
+
+.topSectionParagraph {
+	font-size: 16px;
+  line-height: 2;
+  letter-spacing: normal;
+	color: #ffffff;
+	width: 70%;
+}
+
+.topSectionHeading{
+	font-size: 48px;
+	@include mobile {
+		font-size: 36px;
+	}
+}

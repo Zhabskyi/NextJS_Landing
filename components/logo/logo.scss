@@ -1,0 +1,15 @@
+@import '../../styles/_mixins.scss';
+
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background-color: transparent;
+	transition: color 0.2s linear;
+		@include mobile {
+			font-size: 26px;
+			color: black;
+		}
+}

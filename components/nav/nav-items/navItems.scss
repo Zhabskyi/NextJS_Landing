@@ -1,0 +1,40 @@
+@import '../../../styles/mixins';
+
+.menu {
+			display: flex;
+			flex-flow: row;
+			padding: 0;
+			margin: 0;
+			justify-content: space-around;
+			max-width: 1024px;
+			height: 100%;
+			width: 70%;
+			@include mobile {
+				flex-flow: column;
+				color: black;
+			}
+		}
+	.item {
+		display: flex;
+		justify-content: center;
+		padding: 0 10px;
+		@include mobile {
+			width: 100%;
+			padding-left: 86px;
+		}
+			&__link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				background-color: transparent;
+				transition: color 0.2s linear;
+				& > * {
+					@include mobile {
+						height: 50px;
+						line-height: 50px;
+						color: black;
+					}
+				}
+			}
+	}

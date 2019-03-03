@@ -1,0 +1,94 @@
+@import './mixins';
+@import './variables';
+
+$col-counts: 12;
+$min-col-size: 100% / $col-counts;
+
+@mixin createRow($infixName: null) {
+  $infix: breakpoint-infix($infixName);
+
+  .row#{$infix}_center {
+    justify-content: center;
+  }
+  .row#{$infix}_start {
+    justify-content: flex-start;
+  }
+  .row#{$infix}_end {
+    justify-content: flex-end;
+  }
+  .row#{$infix}_column-reverse {
+    flex-direction: column-reverse;
+  }
+  .row#{$infix}_column {
+    flex-direction: column;
+  }
+  .row#{$infix}_row_reverse {
+    flex-direction: row-reverse;
+  }
+  .row#{$infix}_align_stretch {
+    align-items: stretch;
+  }
+  .row#{$infix}_align_start {
+    align-items: flex-start;
+  }
+  .row#{$infix}_align_center {
+    align-items: center;
+  }
+  .row#{$infix}_align_end {
+    align-items: flex-end;
+  }
+  .row#{$infix}_padding_none {
+    [class*="col_"] {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+@mixin createCols($i, $infixName: null) {
+  $size: $min-col-size * $i;
+  $infix: breakpoint-infix($infixName);
+  @if not ($i == 0) {
+    .col#{$infix}_#{$i} {
+      flex-basis: $size;
+      width: $size;
+      max-width: $size;
+    }
+  }
+
+  .offset#{$infix}-#{$i} {
+    margin-left: $min-col-size * $i
+  }
+}
+
+@mixin generateGrid {
+  [class*="col_"] {
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 0 0.5rem;
+    position: relative;
+    min-height: 1px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    word-break: break-word;
+  }
+
+  @include createRow();
+  @for $i from 0 through $col-counts {
+    @include createCols($i);
+  }
+  @each $sizeName, $size in $devices-width {
+    @include media-breakpoint-down($sizeName, $devices-width) {
+      @include createRow($sizeName);
+      @for $i from 0 through $col-counts {
+        @include createCols($i, $sizeName);
+      }
+    }
+  }
+}
+
+@include generateGrid;

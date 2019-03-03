@@ -1,0 +1,17 @@
+@import '../../styles/mixins';
+
+.actionBlock {
+	&__content {
+		position: relative;
+    display: flex;
+		flex-direction: column;
+		padding-bottom: 260px;
+			@include mobile {
+				padding-bottom: 20px;
+				align-items: center;
+			}
+	}
+	&__controls {
+		padding-top: 25px;
+	}
+}

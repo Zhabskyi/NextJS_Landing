@@ -1,0 +1,18 @@
+@import '../../styles/core';
+
+.section__image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+	@include mobile {
+		margin-top: 20px;
+		width: 60%;
+	}
+	& > img {
+		width: 100%;
+		display: block;
+	}
+}

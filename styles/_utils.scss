@@ -1,0 +1,70 @@
+@import './core';
+
+.image_container  {
+  > img {
+    width: 100%;
+    display: block;
+  }
+}
+
+@mixin generateUtils($infixName: null) {
+  $infix: breakpoint-infix($infixName);
+  .text#{$infix}_center {
+    text-align: center;
+  }
+  .text#{$infix}_left {
+    text-align: left;
+  }
+  .text#{$infix}_right {
+    text-align: right;
+  }
+  .text#{$infix}_bold {
+    font-weight: bold
+  }
+
+  .text#{$infix}-secondary {
+    color: get-color(text, secondary);
+  }
+
+  .text#{$infix}-attention {
+    color: get-color(text, attention)
+  }
+
+  .text#{$infix}-xl {
+    font-size: 120px;
+    @include mobile {
+      font-size: 50px;
+    }
+  }
+
+  .vertical#{$infix}-centered {
+    @include absoluteVerticalCenter;
+  }
+
+  .padding#{$infix}-bottom-none {
+    padding-bottom: 0;
+  }
+
+  .padding#{$infix}-top-none {
+    padding-top: 0;
+  }
+
+  .padding#{$infix}-left-none {
+    padding-left: 0;
+  }
+
+  .padding#{$infix}-right-none {
+    padding-right: 0;
+  }
+}
+
+@mixin createUtils {
+  @include generateUtils();
+  @each $sizeName, $size in $devices-width {
+    @include media-breakpoint-down($sizeName, $devices-width) {
+      @include generateUtils($sizeName);
+    }
+  }
+}
+
+@include createUtils();
