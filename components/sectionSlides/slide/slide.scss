@@ -1,0 +1,21 @@
+@import '../../../styles/mixins';
+
+.container {
+	width: 420px;
+	height: 500px;
+	padding: 80px 60px 60px 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	background-color: rgb(31, 219, 132);
+	border-radius: 6px;
+  backdrop-filter: blur(10px);
+  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+}
+
+.quotes {
+	width: 49px;
+	display: flex;
+	justify-content: space-between;
+}

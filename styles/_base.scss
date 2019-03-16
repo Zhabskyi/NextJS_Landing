@@ -11,7 +11,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  font-family: 'Bariol', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 400;
   font-size: $font-size-base;
   color: get-color(text, primary);
@@ -65,7 +65,8 @@ h5 {
 }
 
 ul, ol {
-  padding-left: 1.2rem;
+	margin: 0;
+	padding: 0;
 }
 
 a {

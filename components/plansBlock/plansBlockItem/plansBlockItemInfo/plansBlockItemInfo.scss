@@ -1,0 +1,68 @@
+@import '../../../../styles/mixins';
+
+.card__side {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		margin-top: 40px;
+	}
+}
+
+
+.title {
+	& > ul {
+		margin-bottom: 60px;
+	}
+	& > ul > li:first-child {
+		margin-bottom: 40px;
+		@include mobile {
+			margin-bottom: 30px;
+		}
+	}
+	&__head {
+		font-size: 24px;
+		line-height: 1.33;
+		letter-spacing: 0.3px;
+		text-align: center;
+		color: #32325c;
+	}
+	&__price {
+		font-size: 72px;
+		line-height: 0.89;
+		text-align: center;
+		color: #1fdb84;
+	}
+	&__period {
+		margin: 20px 60px;
+		font-size: 16px;
+		line-height: 2;
+		letter-spacing: 0.2px;
+		text-align: center;
+		color: #5b6c94;
+	}
+}
+
+.option__list > li {
+	margin: 20px 60px;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.2px;
+  text-align: center;
+	color: #5b6c94;
+	@include tablet {
+		margin: 20px 40px;
+	}
+}
+
+
+.button {
+	margin-bottom: 40px;
+	@include tablet {
+		width: 160px;
+		height: 40px;
+		font-size: 16px;
+		border-radius: 5px 0px 5px;
+	}
+}

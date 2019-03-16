@@ -1,0 +1,32 @@
+@import '../../../styles/mixins';
+
+.container {
+	margin: 20px auto;
+	width: 470px;
+	height: 60px;
+	display: flex;
+	@include mobile {
+		width: 350px;
+		height: 50px;
+	}
+}
+
+.button {
+	border: solid 1px #aefdd9;
+	color: #1fdb84;
+	font-weight: 500;
+	margin: 0;
+	&_monthly {
+		flex: 0 0 33.33%;
+		border-radius: 5px 0 0 5px;
+	}
+	&_yearly {
+		flex: 0 0 66.67%;
+		border-radius: 0 5px 5px 0;
+	}
+}
+
+.Active {
+	color: #6fdeaa;
+	background-color: #f1fff8;
+}

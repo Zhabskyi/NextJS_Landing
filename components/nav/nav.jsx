@@ -57,7 +57,7 @@ class Nav extends React.Component {
 
 	render() {
 		return(
-			<React.Fragment>
+			<>
 				<nav id='main' className={classes.navbar}>
 					<MenuToggle onClick={this.sideDrawerToggleHandler}/>
 					<div className={classes.navbar__logo}>
@@ -98,7 +98,7 @@ class Nav extends React.Component {
 					contentLabel="Example Modal">
 						<SignIn />
 				</Modal>
-			</React.Fragment>
+			</>
 		)
 	}
 }

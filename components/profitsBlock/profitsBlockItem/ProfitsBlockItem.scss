@@ -1,0 +1,40 @@
+@import '../../../styles/styles-global.scss';
+
+.block {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	@include mobile {
+		align-items: center;
+	}
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 78px;
+		height: 78px; 
+ 	 	border-radius: 6px;
+		background-color: get-color(background, secondary-light);
+		&__wrap {
+			width: 55.55%;
+			& > img {
+				width: 100%;
+			}
+		}
+	}
+	& > p {
+		line-height: 2;
+		color: get-color(text, tertiary);
+		@include mobile {
+			text-align: center;
+		}
+	}
+	& > p:nth-child(2) {
+		font-size: 18px;
+ 	 	font-weight: 500;
+		color:  get-color(text, secondary);
+	}
+	&:last-child {
+		margin-right: 0px;
+	}
+}
