@@ -1,0 +1,93 @@
+import React, { Component } from 'react';
+import classes from './bottomSection.scss';
+import classnames from 'classnames';
+import data from '../config/commentsBlockConfig';
+
+import Quotes from '../quotes/quotes';
+import Slide from '../sectionSlides/slide/slide';
+import SlideBubblesControls from '../sectionSlides/slideControls/slideBubblesControls/slideBubblesControls';
+import SlideArrowsControls from '../sectionSlides/slideControls/slideArrowsControls/slideArrowsControls';
+
+class BottomSection extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			properties: data.properties,
+      property: data.properties[0]
+		}
+	}
+
+	nextProperty = () => {
+    const newIndex = this.state.property.index+1;
+   
+		if ( newIndex >= this.state.properties.length) {
+			this.setState({
+				property: data.properties[0]
+			})
+		} else {
+			this.setState({
+				property: data.properties[newIndex]
+			});
+		}
+  }
+
+  prevProperty = () => {
+		const newIndex = this.state.property.index-1;
+		
+		if ( newIndex < 0) {
+			this.setState({
+				property: data.properties[this.state.properties.length - 1]
+			});
+		} else {
+			this.setState({
+				property: data.properties[newIndex]
+			});
+		}
+	}
+	
+	bubbleClickHandler = (index) => {
+		this.setState({
+			property: data.properties[index]
+		})
+	}
+
+	render() {
+
+
+		return (
+			<section className={classes.customerSecion}>
+				<div className={classes.container}>
+					<div className={classes.container__left}>
+						<Quotes color='lightGreen' size='big'/>
+					</div>
+					<div className={classes.container__right}>
+						<SlideArrowsControls
+							onClickPrev={this.prevProperty}
+							onClickNext={this.nextProperty}/>
+					</div>
+							<div className={classnames(classes.slider, classes[`active_slide_${this.state.property.index}`])}>
+								<div className={classes.slider_wrapper} style={{
+												'transform': `translateX(-${this.state.property.index*(100/this.state.properties.length)}%)`
+											}}>
+									{this.state.properties.map(el => (
+													<Slide
+														active={this.state.property.index}
+														quotesColor='white'
+														key={el.id}
+														index={el.index}
+														comment={el.comment} 
+														name={el.name}
+														company={el.company} />
+												))}
+								</div>
+						</div>
+					<SlideBubblesControls
+						active={this.state.property.index}
+						bubbleClick={this.bubbleClickHandler}/>
+			</div>
+		</section>
+		)
+	}
+}
+
+export default BottomSection;

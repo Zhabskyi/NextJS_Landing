@@ -6,10 +6,15 @@ import ActionBlock from '../components/actionBlock/actionBlock';
 import SectionImage from '../components/sectionImage/sectionImage';
 import ProfitsBlock from '../components/profitsBlock/ProfitsBlock';
 import PlansBlock from '../components/plansBlock/PlansBlock';
-import Quotes from '../components/quotes/quotes';
-import SectionbSlides from '../components/sectionSlides/sectionSlides';
+import BottomSection from '../components/bottomSection/bottomSection';
+import FooterBrands from '../components/footerComponents/footerBrands';
+import CopyRight from '../components/copyRight/copyRight';
+import FooterNav from '../components/footerComponents/footerNav';
+
+
 import classnames from 'classnames';
 import classes from './index.scss';
+
 
 const Home = () => (
 	<div className={classes.container}>
@@ -34,14 +39,13 @@ const Home = () => (
 				<ProfitsBlock />
 			</div>
 			<PlansBlock />
-			<section className={classes.customerSecion}>
-				<div className={classes.customerSecion__left}>
-					<Quotes color='lightGreen' size='big'/>
-				</div>
-				<div className={classes.customerSecion__right}>
-				</div>
-				 <SectionbSlides /> 
-			</section>
+			<BottomSection/>
+			<footer>
+				<h3>WORKS WITH ANY PLATFORM</h3>
+				<FooterBrands/>
+				<CopyRight>autocryp All Right Reserved</CopyRight>
+				<FooterNav/>
+			</footer>
 		</div>
 	
 )

@@ -1,21 +1,59 @@
 @import '../../../styles/mixins';
 
 .container {
-	width: 420px;
-	height: 500px;
-	padding: 80px 60px 60px 50px;
+	min-width: 360px;
+	max-width: 420px;
+	height: 460px;
+	padding: 60px 40px;
+	margin: 0 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-	background-color: rgb(31, 219, 132);
+	background-color: white;
+	color: #5b6c94;
+	line-height: 2;
 	border-radius: 6px;
-  backdrop-filter: blur(10px);
-  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+	backdrop-filter: blur(10px);
+  box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+	background-color: rgba(255, 255, 255, 0.95);
+	transition: all .4s ease;
+	@include mobile {
+		min-width: 100vw;
+		margin: 0;
+	}
 }
 
+.name {
+	color:#031d5b;
+	font-size: 18px;
+}
+
+.company {
+	opacity: 0.4;
+	color: #031d5b;
+}
 .quotes {
 	width: 49px;
 	display: flex;
 	justify-content: space-between;
+}
+
+
+.active {
+	background-color: #1fdb84;
+	box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+	color: white;
+	@include mobile {
+		box-shadow: none;
+	}
+}
+
+.active .name {
+	color: white;
+}
+
+.active .company {
+	color: white;
+	opacity: 0.8;
 }

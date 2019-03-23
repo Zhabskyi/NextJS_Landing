@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import classes from './navItems.scss';
+import classnames from 'classnames';
 
 
 const links = [
@@ -12,14 +13,15 @@ const links = [
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link
-})
+});
 
-const NavItems = () => (
+
+const NavItems = (props) => (
       <ul className={classes.menu}>
 				{links.map(({ key, href, label }) => (
 					<li className={classes.item} key={key}>
 						<Link href={href}>
-							<a className={classes.item__link}><span>{label}</span></a>
+							<a className={classnames(classes.item__link, props.className)}><span>{label}</span><span className={classes.divider}>{props.symbol}</span></a>
 						</Link>
 					</li>
 				))}

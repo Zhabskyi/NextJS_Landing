@@ -1,18 +1,21 @@
 import React from 'react';
 
 import classes from './slide.scss';
+import classnames from 'classnames';
 import Quotes from '../../quotes/quotes';
 
 const slide = (props) => {
 	return (
-		<div className={classes.container}>
+		<div className={classnames(classes.container, {[classes.active] : props.active == props.index})}
+					id={`slide_${props.index}`}>
 			<div className={classes.quotes}>
-				<Quotes color={props.quotesColor} size={props.quotesSize} />
+				<Quotes color={props.active == props.index ? 'white' : 'green'} size='small' />
 			</div>
-			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea rem, voluptatum minima nulla qui aut, velit numquam eveniet minus delectus voluptatem pariatur voluptas inventore veritatis porro sapiente repellat ab soluta?</p>
-			<p>wwwwwdfdfgrgfdvffvfvv</p>
+			<p>{props.comment}</p>
+			<p><span className={classes.name}>{props.name} / </span><span className={classes.company}>{props.company}</span></p>
 		</div>
 	)
 }
 
-export default slide
+export default slide;
+

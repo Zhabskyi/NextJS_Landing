@@ -1,0 +1,28 @@
+@import '../../styles/mixins';
+
+.container {
+	margin: 100px auto 180px auto;
+	display: flex;
+	font-size: 32px;
+	justify-content: space-around;
+	align-items: center;
+	color: #929dc5;
+	@include mobile {
+		flex-direction: column;
+		height: 250px;
+	}
+}
+
+
+.container > span {
+	color: #929dc5;
+	font-size: 32px;
+}
+
+.container > div:first-child{
+	position: relative;
+}
+
+.amazon {
+	margin-left: 25px;
+}

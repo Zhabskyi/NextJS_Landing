@@ -17,7 +17,6 @@
 	.item {
 		display: flex;
 		justify-content: center;
-		padding: 0 10px;
 		@include mobile {
 			width: 100%;
 			padding-left: 86px;
@@ -29,12 +28,17 @@
 				color: white;
 				background-color: transparent;
 				transition: color 0.2s linear;
-				& > * {
 					@include mobile {
 						height: 50px;
 						line-height: 50px;
 						color: black;
 					}
-				}
 			}
+	}
+
+	.divider {
+		padding:  0 20px;
+		@include mobile {
+			opacity: 0;
+		}
 	}
