@@ -1,4 +1,4 @@
-const data = {
+const commentData = {
 	properties: [
 		{
 			id: '593e9297e17df20c4a237d42',
@@ -45,4 +45,4 @@ const data = {
 	]
 }
 
-export default data;
+export default commentData;

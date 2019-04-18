@@ -64,3 +64,17 @@
 	}
 }
 
+.bubbles {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	right: 0;
+	margin-bottom: 30px;
+	@include mobile {
+		left: 0;
+	}
+
+}
+

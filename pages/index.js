@@ -6,10 +6,11 @@ import ActionBlock from '../components/actionBlock/actionBlock';
 import SectionImage from '../components/sectionImage/sectionImage';
 import ProfitsBlock from '../components/profitsBlock/ProfitsBlock';
 import PlansBlock from '../components/plansBlock/PlansBlock';
-import BottomSection from '../components/bottomSection/bottomSection';
+import Slider from '../components/bottomSection/bottomSection';
 import FooterBrands from '../components/footerComponents/footerBrands';
 import CopyRight from '../components/copyRight/copyRight';
 import FooterNav from '../components/footerComponents/footerNav';
+import commentData from '../components/config/commentsBlockConfig';
 
 
 import classnames from 'classnames';
@@ -39,7 +40,8 @@ const Home = () => (
 				<ProfitsBlock />
 			</div>
 			<PlansBlock />
-			<BottomSection/>
+			<Slider
+				slides={commentData.properties}/>
 			<footer>
 				<h3>WORKS WITH ANY PLATFORM</h3>
 				<FooterBrands/>
