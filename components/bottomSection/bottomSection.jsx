@@ -6,7 +6,7 @@ import Quotes from '../quotes/quotes';
 import Slide from '../sectionSlides/slide/slide';
 import SlideBubblesControls from '../sectionSlides/slideControls/slideBubblesControls/slideBubblesControls';
 import SlideArrowsControls from '../sectionSlides/slideControls/slideArrowsControls/slideArrowsControls';
-import { sliderHOC } from './sliderHOC';
+import { sliderHOC } from '../hoc/sliderHOC';
 
 
 //After refactoring
