@@ -22,7 +22,7 @@ class BottomSection extends Component {
 		const { activeIndex, slides, onNext, onPrev, onSetIndex } = this.props;
 		return (
 			<section className={classes.customerSecion} onClickCapture={() => console.log('CLICK  CAPTURED')}>
-				<div className={classes.container}>
+				<div className={classes.container} id="Testimonials">
 					<div className={classes.container__left}>
 						<Quotes color='lightGreen' size='big' />
 					</div>

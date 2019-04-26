@@ -37,13 +37,13 @@ const Home = () => (
 					</div>
 				</div>
 				</Section>
-				<ProfitsBlock />
+				<ProfitsBlock/>
 			</div>
 			<PlansBlock />
 			<Slider
 				slides={commentData.properties}/>
 			<footer>
-				<h3>WORKS WITH ANY PLATFORM</h3>
+				<h3 id="Client">WORKS WITH ANY PLATFORM</h3>
 				<FooterBrands/>
 				<CopyRight>autocryp All Right Reserved</CopyRight>
 				<FooterNav/>

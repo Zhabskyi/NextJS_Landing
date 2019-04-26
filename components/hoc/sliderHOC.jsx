@@ -52,6 +52,7 @@ export function sliderHOC (SliderComponent) {
                 activeIndex: index
             })
 				}
+
 				
 
         render() {
@@ -61,7 +62,7 @@ export function sliderHOC (SliderComponent) {
                 activeIndex={activeIndex} 
                 onNext={this.nextProperty}
                 onPrev={this.prevProperty}
-                onSetIndex={this.setIndex}
+								onSetIndex={this.setIndex}
                 />
         }
     }

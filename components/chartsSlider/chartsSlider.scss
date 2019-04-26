@@ -1,0 +1,32 @@
+@import '../../styles/mixins';
+
+.container {
+	position: relative;
+	margin: 60px 0;
+	padding-bottom: 20px;
+	width: 100%;
+	overflow: hidden;
+	@include mobile {
+		margin: 30px 0;
+	}
+}
+
+.bubbles {
+	display: flex;
+	justify-content: center;
+	//position: absolute;
+	// bottom: 0;
+	// left: 0;
+	// right: 0;
+}
+
+.arrows {
+	position: relative;
+	height: 30px;
+	width: 100%;
+}
+
+.slides {
+	max-width: 1024px;
+	margin: 0 auto;
+}

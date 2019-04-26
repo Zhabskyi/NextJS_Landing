@@ -1,0 +1,22 @@
+.container {
+	width: 100%;
+	display: none;
+}
+
+.active{
+		position: relative;
+		display: block;
+		animation: fadeIn 1s;
+	}
+
+img {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+		to { opacity: 1; }
+}
+

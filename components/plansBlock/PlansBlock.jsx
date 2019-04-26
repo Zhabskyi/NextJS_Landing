@@ -42,7 +42,7 @@ export class PlansBlock extends Component {
 
 			
 		return (
-			<div className={classes.plansBlocksWrapper}>
+			<div className={classes.plansBlocksWrapper} id="Pricing">
 			<p>Paid plan starts with a 7-day free trial, No credit card required</p>
 			<PlansBlockButtons
 				isMonthlyPrice={this.state.isMonthlyPrice}

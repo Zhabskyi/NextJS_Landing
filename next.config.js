@@ -18,12 +18,12 @@ module.exports = withSass({
   }
 })
 
-const prod = process.env.NODE_ENV === 'production'
-module.exports = {
-  // some configuration
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/NextJS_Landing' : '',
-  // another configuration
-}
+// const prod = process.env.NODE_ENV === 'production'
+// module.exports = {
+//   // some configuration
+//   assetPrefix: process.env.NODE_ENV === 'production' ? '/NextJS_Landing' : '',
+//   // another configuration
+//}
 
 // const withSass = require('@zeit/next-sass')
 // module.exports = withSass({

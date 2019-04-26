@@ -7,8 +7,8 @@ const ActionBlock = (props) => {
 				{props.children}
 			<div className={classes.actionBlock__controls}>
 					<Button 
-						onClick={() => Router.push('/pricing')} 
-						title='Get Started'
+						onClick={() => Router.push('/slider')} 
+						title='Presentation'
 						btnType='successBig'/>
 			</div>
 			</div>

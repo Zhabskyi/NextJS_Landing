@@ -16,6 +16,8 @@
 		display: flex;
 		margin-right: 50px;
 		font-size: 26px;
+		width: 70px;
+		height: 70px;
 		@include mobile {
 			display: none;
 		}

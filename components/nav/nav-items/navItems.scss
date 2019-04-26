@@ -14,27 +14,29 @@
 				color: black;
 			}
 		}
-	.item {
-		display: flex;
-		justify-content: center;
-		@include mobile {
-			width: 100%;
-			padding-left: 86px;
-		}
-			&__link {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				color: white;
-				background-color: transparent;
-				transition: color 0.2s linear;
-					@include mobile {
-						height: 50px;
-						line-height: 50px;
-						color: black;
-					}
-			}
+
+.item {
+	display: flex;
+	justify-content: center;
+	@include mobile {
+		width: 100%;
+		padding-left: 86px;
 	}
+}
+
+.link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background-color: transparent;
+	transition: color 0.2s linear;
+		@include mobile {
+			height: 50px;
+			line-height: 50px;
+			color: #031d5b;
+		}
+}
 
 	.divider {
 		padding:  0 20px;

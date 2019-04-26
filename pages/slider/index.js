@@ -1,8 +1,12 @@
 import React from 'react';
+
 import Head from '../../components/head';
 import Nav from '../../components/nav/nav';
+import Slider from '../../components/chartsSlider/chartsSlider';
 import CopyRight from '../../components/copyRight/copyRight';
 import FooterNav from '../../components/footerComponents/footerNav';
+
+import config from '../../components/config/chartsSliderConfig';
 
 
 
@@ -15,6 +19,8 @@ const pricing = () => (
 		<Head title="Home" />
 			<div className={classes.topWrapper}>
 				<Nav />
+				<Slider
+				slides={config}/>
 			<footer>
 				<CopyRight>autocryp All Right Reserved</CopyRight>
 				<FooterNav/>

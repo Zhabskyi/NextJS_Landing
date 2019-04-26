@@ -8,7 +8,7 @@ import config from '../config/profitsBlockConfig';
 const ProfitsBlock = () => {
 
 	return (
-		<div className={classes.main}>
+		<div className={classes.main} id="Benefit">
 			<div className={classes.main__wrapper}>
 				{config.map(el => (
 						<ProfitsBlockItem
