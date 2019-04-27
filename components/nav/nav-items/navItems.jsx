@@ -38,7 +38,8 @@ class NavItems extends React.Component {
 								spy={true}
 								smooth={true}
 								offset={offset}
-								duration={duration}>
+								duration={duration}
+								onClick={this.props.onClick}>
 								<span>{to}</span><span className={classes.divider}>{this.props.symbol}</span>
 							</Link>
 						</div>

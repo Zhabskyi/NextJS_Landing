@@ -68,7 +68,7 @@ class Nav extends React.Component {
 					</div>
 					<div className={classes.navbar__right}>
 							<li className={classes.navbar__item} onClick={this.openSignInModal}>
-								<Link prefetch href="/">
+								<Link prefetch href="/" >
 									<a className={classes.navbar__item__link}>Login</a>
 								</Link>
 							</li>

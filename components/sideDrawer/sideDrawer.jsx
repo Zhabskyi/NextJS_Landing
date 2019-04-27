@@ -22,10 +22,10 @@ const sideDrawer = (props) => {
 							<span></span>
 					</Button>
 						<div className={classes.logo}>
-							<Logo />
+							<Logo onClick={props.onClick}/>
 						</div>
 						<nav>
-							<NavItems/>
+							<NavItems onClick={props.onClick}/>
 						</nav>
 				</div>
 			</div>
