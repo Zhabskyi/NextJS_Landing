@@ -8,7 +8,7 @@
 
 	&__side {
 		transition: all .8s ease;
-		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 		height: 640px;
 		display: flex;
 		flex-direction: column;
