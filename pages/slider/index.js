@@ -2,6 +2,7 @@ import React from 'react';
 
 import Head from '../../components/head';
 import Nav from '../../components/nav/nav';
+import Logo from '../../components/logo/logo';
 import Slider from '../../components/chartsSlider/chartsSlider';
 import CopyRight from '../../components/copyRight/copyRight';
 import FooterNav from '../../components/footerComponents/footerNav';
@@ -18,7 +19,11 @@ const pricing = () => (
 	<div className={classes.container}>
 		<Head title="Home" />
 			<div className={classes.topWrapper}>
-				<Nav />
+			<div className={classes.navbar}>
+				<div className={classes.logo}>
+					<Logo />
+				</div>
+			</div>
 				<Slider
 				slides={config}/>
 			<footer>

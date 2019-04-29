@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 
 
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -39,7 +40,8 @@ class NavItems extends React.Component {
 								smooth={true}
 								offset={offset}
 								duration={duration}
-								onClick={this.props.onClick}>
+								onClick={() => Router.push('/')}
+								className={classes.ancor}>
 								<span>{to}</span><span className={classes.divider}>{this.props.symbol}</span>
 							</Link>
 						</div>
